@@ -1,0 +1,90 @@
+body {
+    /* Pet-peeve of mine */
+    cursor: default;
+  }
+  p,
+  label {
+    color: #ffffff;
+  }
+  
+  fieldset {
+    border: none;
+    outline: none;
+    background: #333333;
+    width: 100%;
+    max-width: 500px;
+    padding: 16px;
+  }
+  
+  fieldset .select .select-wrapper {
+    position: relative;
+    border: 1px solid #ffffff;
+  }
+  
+  fieldset .select .select-wrapper select {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    appearance: none;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  fieldset .select .select-wrapper select + i {
+    position: absolute;
+    top: 25%;
+    right: 15px;
+  }
+  
+
+  /*The :invalid selector on the select only works on an option
+  if the select box is required, and the selected option's value is empty,
+  so you can style it as you would a text box's placeholder text.
+  
+  Setting it to disabled prevents the user from selecting it in the select options,
+  and setting it to hidden hides it from the select options.*/
+  
+  select:invalid {
+    color: #666666;
+    font-size: 8px;
+    /*Change color of "placeholder" text in select box*/
+  }
+  select{
+    height: 60px;
+  }
+  select option {
+    /*Default color for valid options*/
+    color: #000000;
+    font-size: 16px;
+  }
+  
+  select option[value=""] {
+    /*Change color of "placeholder" text in dropdown for invalid options*/
+    color: #999999;
+    font-size: 8px;
+  }
+  
+  /* Theme Colors */
+  
+  .theme-dark {
+    background-color: #000000;
+  }
+  
+  .theme-light {
+    background-color: #cccccc;
+    border-color: #000000 !important;
+  }
+  
+  .theme-dark select + i {
+    color: #ffffff;
+  }
+  
+  .theme-dark select {
+    color: #ffffff;
+  }
+  

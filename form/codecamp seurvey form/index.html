@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="styles.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <title>project build a survey-form </title>
+</head>
+
+<body>
+    <form id="survey-form">
+        <section>
+            <li id="toggle">
+                <input class="toggle" type="checkbox" value="dark" >
+                <label for="darkmode"></label>
+                <input  class="unused"type="checkbox" value="empty" >
+              </li>
+            <h1 id="title">Contact Form</h1>
+        <p id="description">Project for Freecodecamp Responsive Web Design </p>
+        <ul>
+            <li>
+                <label for="name" id="name-label">
+                    First Name</label>
+                <input id="name" type="text" required placeholder="Enter your First Name"></input>
+            </li>
+            <li>
+                <label for="email" id="email-label">
+                    E-mail</label>
+                <input id="email" type="email" required placeholder="Enter your e-mail"></input>
+            </li>
+            <li>
+                <label for="number" id="number-label">
+                    Phone</label>
+                <input placeholder="Enter your phone number" id="number" type="number" min="1" max="999999999999999" step="1">
+            </li>
+            <li>
+                <label for="dropdown">
+                    Contact Reason
+                </label>
+                <select id="dropdown" name="reasons" required>
+                    <option value="" selected disabled>select an option</option>
+                    <!-- I give up can't give the default a smaller font -->
+                    <option value="technical problem">technical Problem</option>
+                    <option value="Info">need more information</option>
+                </select>
+            </li>
+            
+        </section>
+        <section>
+            <li class="radio-Button">
+                <label> How do you feel about this side</label>
+                <div class="smileys-container">
+                <label for="bad" class="smileys-label">
+                    <input class="smileys" type="radio" value="1" name="feedback"id="bad"/>
+                    <div class="face">
+                        <div class="left-eye"></div>
+                        <div class="right-eye"></div>
+                        <div class="frown"></div>
+                    </div>
+                </label>
+                <label for="neutral" class="smileys-label">
+                    <input class="smileys" type="radio" value="2" name="feedback"id="neutral"/>
+                    <div class="face">
+                        <div class="left-eye"></div>
+                        <div class="right-eye"></div>
+                        <div class="neutral"></div>
+                    </div>
+                </label>
+                <label for="happy" class="smileys-label">
+                    <input class="smileys" type="radio" value="3" name="feedback"id="happy"/>
+                    <div class="face">
+                        <div class="left-eye"></div>
+                        <div class="right-eye"></div>
+                        <div class="smile"></div>
+                    </div>
+                </label>
+            </div>
+            </li>
+            <li>
+                <label for="feedback">Your message</label>
+                <textarea rows="10" id="feedback"></textarea>
+                
+            </li>
+        
+            <button type="submit" id="submit">Send</button>
+            </ul>
+            </section>
+    </form>
+    <script>const btn = document.querySelector(".toggle");
+        document.querySelector(".toggle")
+      .addEventListener("change", function () {
+        document.body.classList.toggle("dark-theme");
+       });</script> 
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>

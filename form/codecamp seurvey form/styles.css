@@ -1,0 +1,314 @@
+body{
+   
+   --main-bg-col:#3e5c76;
+   --secondary-bg-col:#1D2D44;
+   --main-font-col:#F0EBD8;
+   --secondary-font-col:#748CAB;
+   --hover-col:#748CAB; 
+}
+body.dark-theme{
+    --main-bg-col:#F0EBD8;
+    --secondary-bg-col:#3e5c76;
+    --main-font-col:#1D2D44;
+    --secondary-font-col:#748CAB;
+    --hover-col:#748CAB;
+}
+body{
+    background-color: var(--main-bg-col);
+    
+}
+#survey-form{
+   
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    justify-content: center;
+    
+}
+section{
+    width:80%;
+    max-width: 480px;
+}
+form{
+    background-color: var(--main-bg-col
+    );
+    color:var(--main-font-col);
+    width: 90%;
+    border:5px solid var(--secondary-bg-col);
+    border-radius:40px;
+    box-shadow: 20px 20px 0 var(--secondary-bg-col);
+    font-family: sans-serif;
+    
+    margin:10vh auto;
+    
+}
+/* reset default set */
+ul{
+    padding: 0px;
+}
+button,
+input,
+select,
+textarea{
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    appearance: none;
+}
+
+label{
+    display:block;
+    padding: 5px 10px;
+ 
+} 
+li{
+    list-style: none;
+    margin-top:10px;
+}
+/*  */
+
+/* remove Arrows from number input*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+}
+/* ---- */
+h1{
+    font-size: 2rem;
+}
+h1, p{
+ color: var(--main-font-col);
+ font-weight: 700;
+ padding:  0 10px;
+}
+button,
+input,
+select,
+textarea{
+    border:5px solid var(--secondary-bg-col);
+    border-radius:25px;
+    box-shadow: 10px 10px 0 var(--secondary-bg-col);
+    font-size: 1.5rem;
+    width:90%; 
+    padding: 10px;
+    background-color: var(--main-bg-col);
+    margin-bottom:10px ;
+    color: var(--main-font-col);
+}
+button{
+    margin-top: 10px;
+}
+select{
+    height: 57px;
+}
+select:invalid{
+    font-size:1.0rem;
+    color:var(--secondary-font-col)
+}
+select option{
+    font-size:1.5rem;
+    color:var(--main-font-col)
+}
+select option[value=""]{
+    font-size:1.0rem;
+    color:var(--secondary-font-col)
+}
+input::placeholder{
+    font-size:1.0rem;
+    color:var(--secondary-font-col)
+}
+.smileys-container{
+    
+    display:flex ;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width:90%;
+    
+}
+/* focused and selected */
+
+input[type="text"]:hover,
+input[type="text"]:active,
+input[type="text"]:focus,
+input[type="email"]:hover,
+input[type="email"]:active,
+input[type="email"]:focus,
+input[type="number"]:hover,
+input[type="number"]:active,
+input[type="number"]:focus,
+button:hover,
+button:active,
+button:focus,
+select:focus,
+select:active,
+select:hover,
+textarea:focus,
+textarea:active,
+textarea:hover
+{
+    background-color: var(--hover-col);
+    border:5px solid var(--main-font-col);
+    border-radius:25px;
+}
+/* smileys */
+/* remove default from radio */
+.smileys{
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+    box-shadow: none;
+    appearance: none;
+    margin: 0px;
+    border: none;
+    
+}
+.smileys-label{
+    padding:0px 5px ;
+    margin-top: -10px;
+}
+
+.face{
+    
+    position: relative;
+    width:48px;
+    height:48px;   
+    border: 5px solid var(--secondary-bg-col);
+    border-radius:50%;
+}
+.left-eye{
+    position: absolute;
+    top:10px;
+    left:6px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--secondary-bg-col);
+    border-radius: 50%;
+}
+.right-eye{
+    position: absolute;
+    top:10px;
+    right:6px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--secondary-bg-col);
+    border-radius: 50%;
+  
+}
+.smile{
+    position: absolute;
+    top:-8px;
+    left:-1px;
+    width:40px;
+    height: 40px;
+    border: 5px solid transparent;
+    border-bottom: 5px solid var(--secondary-bg-col);
+    border-radius: 50%;
+   }
+.frown{  position: absolute;
+    top:30px;
+    left:-1px;
+    width:40px;
+    height: 40px;
+    border: 5px solid transparent;
+    border-top: 5px solid var(--secondary-bg-col);
+    border-radius: 50%;
+   }
+.neutral{  position: absolute;
+    top:32px;
+    left:8px;
+    width:30px;
+    height: 5px;
+    background-color:var(--secondary-bg-col) ;
+   }
+/* smileys checked */
+input[type="radio"]:checked + div{
+    border-color:var(--main-font-col);
+    background-color:var(--hover-col)
+}
+input[type="radio"]:checked +div .left-eye,
+input[type="radio"]:checked +div .right-eye,
+input[type="radio"]:checked +div .neutral{
+    background-color:var(--main-font-col);
+}
+
+input[type="radio"]:checked +div .smile{
+    border-bottom-color: var(--main-font-col);
+}
+input[type="radio"]:checked +div .frown{
+    border-top-color: var(--main-font-col);
+}
+
+/* smileyes hover */
+input[type="radio"]:active + div,
+input[type="radio"]:hover + div{
+    background-color:var(--hover-col);
+}
+/* toogle stolen content orginal here:https://mdn.github.io/learning-area/html/forms/toggle-switch-example/ */
+ /* Flexbox fu to make the control and label line up */
+
+ #toggle {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top:25px;
+    right: 20px;
+  }
+/* make the second checkbox invisble */
+  .unused{
+     width: 0px;
+     height:0px;
+     border:none;
+     box-shadow: none;
+  }
+
+  /*
+     remove the default styling of the checkbox using appearance
+     and create the outer toggle area
+  */
+  .toggle{
+    width: 64px;
+    height: 24px;
+    transition: all 0.4s;
+  }
+
+  /*
+     style the ::before content to look like
+     the inner toggle switch - the bit that moves
+  */
+
+  .toggle::before {
+    width: 16px;
+    height: 16px;
+    border-radius: 9px;
+    background-color: black;
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 16%;
+    transition: all 0.4s;
+  }
+
+  /*
+     change the outer background color and move the inner toggle switch
+     when the checkbox is checked; use transitions for smooth animation
+  */
+
+  .toggle:checked {
+    background-color: #ffaa00;
+    transition: all 0.4s;
+  }
+
+  .toggle:checked::before {
+    left: 35%;
+    transition: all 0.4s;
+  }

@@ -1,0 +1,41 @@
+body {
+    background-color: #fff;
+    color: #333;
+    font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding: 1em;
+    margin: 0;
+}
+form{
+    max-width: 450px;
+}
+* {
+    box-sizing: border-box;
+}
+
+input,
+textarea {
+    font: 1em sans-serif;
+    width: 250px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+    
+}
+textarea{
+    vertical-align: top;
+}
+fieldset {
+    position: relative;
+  }
+  
+  legend {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
